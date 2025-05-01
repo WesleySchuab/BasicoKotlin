@@ -20,6 +20,8 @@ class Pedido( var total: Double = 0.0,
 }
 
 fun main(){
+    // Mudando para ordinal
+    println("Status do Pedido: ${StatusPedido.AGURDANDO_APROVACAO.ordinal}")
     // Tela de compras
 val pedido = Pedido(125.9,"Camiseta, livro")
     // pagamento com cartão
