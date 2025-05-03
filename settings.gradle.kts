@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BasicoDeKotlin"
 include(":app")
+include(":fragments")
