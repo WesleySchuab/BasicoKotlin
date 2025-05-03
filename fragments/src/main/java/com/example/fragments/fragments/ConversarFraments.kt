@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.fragments.R
 
 class ConversarFraments : Fragment () {
     // Metodo que vai construir a visualização
@@ -13,6 +14,8 @@ class ConversarFraments : Fragment () {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return inflater.inflate(
+            R.layout.fragments_conversas, container, false
+        )
     }
 }
