@@ -14,8 +14,9 @@ class ConversarFraments : Fragment () {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(
+        val view = inflater.inflate(
             R.layout.fragments_conversas, container, false
         )
+        return view
     }
 }
