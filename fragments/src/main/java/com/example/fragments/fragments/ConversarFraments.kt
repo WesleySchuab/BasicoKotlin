@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fragments.R
 
-class ConversarFraments : Fragment () {
+class ConversarFraments : Fragment (R.layout.fragments_conversas) {
     // Metodo que vai construir a visualização
-    override fun onCreateView(
+    /*override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,5 +18,5 @@ class ConversarFraments : Fragment () {
             R.layout.fragments_conversas, container, false
         )
         return view
-    }
+    }*/
 }
