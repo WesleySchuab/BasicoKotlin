@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fragments.fragments.ChamadasFragments
 import com.example.fragments.fragments.ConversarFraments
 
 class MainActivity : AppCompatActivity() {
@@ -32,10 +33,21 @@ class MainActivity : AppCompatActivity() {
         btnConversas = findViewById(R.id.btn_conversas)
         btnChamadas = findViewById(R.id.btn_chamadas)
 
-        // Forma otimizada
-        supportFragmentManager
-            .beginTransaction()
-            .add(R.id.fragment_conteudo, ConversarFraments())
-            .commit()
+        btnConversas.setOnClickListener {
+            // Forma otimizada
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_conteudo, ConversarFraments())
+                .commit()
+        }
+        btnChamadas.setOnClickListener {
+            // Forma otimizada
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_conteudo, ChamadasFragments())
+                .commit()
+        }
+
+
     }
 }
