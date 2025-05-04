@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         // Forma otimizada
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.fragmentContainerView, ConversarFraments())
+            .add(R.id.fragment_conteudo, ConversarFraments())
             .commit()
     }
 }
