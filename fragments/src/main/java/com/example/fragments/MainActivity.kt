@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.fragments.fragments.ChamadasFragments
 import com.example.fragments.fragments.ConversarFraments
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var btnConversas: Button
+    private lateinit var btnMercado: Button
     private lateinit var btnChamadas: Button
     private lateinit var btnLimpar: Button
     var chamadas = false
@@ -32,14 +33,19 @@ class MainActivity : AppCompatActivity() {
          // Commit
          fragmentManager.commit()*/
 
-        btnConversas = findViewById(R.id.btn_conversas)
+        btnMercado = findViewById(R.id.btnMercado)
         btnChamadas = findViewById(R.id.btn_chamadas)
         btnLimpar = findViewById(R.id.btnLimpar)
 
-        val conversarFraments = ConversarFraments()
+
         val chamadasFragments = ChamadasFragments()
 
-        btnConversas.setOnClickListener {
+        btnMercado.setOnClickListener {
+            val conversarFraments = ConversarFraments()
+            val bundle = bundleOf(
+                "categoria" to "mercado"
+            )
+            conversarFraments.arguments = bundle
             chamadas = false
             // Forma otimizada
             supportFragmentManager
@@ -57,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
         btnLimpar.setOnClickListener {
-            // Forma otimizada
+       /*     // Forma otimizada
             val fragmentManager = supportFragmentManager.beginTransaction()
             if (chamadas) {
                 fragmentManager.remove(chamadasFragments)
@@ -66,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
             // Commit
             fragmentManager.commit()
-        }
+        }*/
 
 
     }

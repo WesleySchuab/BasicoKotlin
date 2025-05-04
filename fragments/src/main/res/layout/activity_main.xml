@@ -22,10 +22,10 @@
         app:layout_constraintGuide_percent="0.66" />
 
     <Button
-        android:id="@+id/btn_conversas"
+        android:id="@+id/btnMercado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Conversas"
+        android:text="Mercado"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -73,7 +73,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/btn_conversas"
+        app:layout_constraintStart_toEndOf="@+id/btnMercado"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
