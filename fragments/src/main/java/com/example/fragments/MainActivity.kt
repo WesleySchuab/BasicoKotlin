@@ -62,8 +62,8 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.fragment_conteudo, chamadasFragments)
                 .commit()
         }
-        btnLimpar.setOnClickListener {
-       /*     // Forma otimizada
+        /* btnLimpar.setOnClickListener {
+           // Forma otimizada
             val fragmentManager = supportFragmentManager.beginTransaction()
             if (chamadas) {
                 fragmentManager.remove(chamadasFragments)
