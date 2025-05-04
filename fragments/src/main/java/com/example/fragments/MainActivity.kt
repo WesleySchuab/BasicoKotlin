@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fragments.fragments.ConversarFraments
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +17,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+       /* // Begin transation
+        val fragmentManager = supportFragmentManager.beginTransaction()
+
+        // Add
+        fragmentManager.add(R.id.fragmentContainerView, ConversarFraments())
+
+        // Commit
+        fragmentManager.commit()*/
+
+        // Forma otimizada
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragmentContainerView, ConversarFraments())
+            .commit()
     }
 }
