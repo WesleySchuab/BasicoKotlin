@@ -37,14 +37,15 @@ class MainActivity : AppCompatActivity() {
             // Forma otimizada
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_conteudo, ConversarFraments())
+                //.add(R.id.fragment_conteudo, ConversarFraments())
+                .replace(R.id.fragment_conteudo, ConversarFraments())
                 .commit()
         }
         btnChamadas.setOnClickListener {
             // Forma otimizada
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragment_conteudo, ChamadasFragments())
+                .replace(R.id.fragment_conteudo, ChamadasFragments())
                 .commit()
         }
 
