@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnChamadas: Button
     private lateinit var btnLimpar: Button
     var chamadas = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,10 +42,14 @@ class MainActivity : AppCompatActivity() {
         val chamadasFragments = ChamadasFragments()
 
         btnMercado.setOnClickListener {
+            //Inicializa o fragment conversas
             val conversarFraments = ConversarFraments()
+
+            // Cria o Bundle que o parametro que o Fragtment vai receber
             val bundle = bundleOf(
                 "categoria" to "mercado"
             )
+            //Passa O bundle através da função arguments
             conversarFraments.arguments = bundle
             chamadas = false
             // Forma otimizada
