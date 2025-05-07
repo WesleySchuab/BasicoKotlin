@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.example.fragments.fragments.ChamadasFragments
 import com.example.fragments.fragments.ConversarFraments
 
@@ -46,18 +48,22 @@ class MainActivity : AppCompatActivity() {
             val conversarFraments = ConversarFraments()
 
             // Cria o Bundle que o parametro que o Fragtment vai receber
-            val bundle = bundleOf(
-                "categoria" to "mercado"
-            )
+
             //Passa O bundle através da função arguments
-            conversarFraments.arguments = bundle
+           // conversarFraments.arguments = bundle
             chamadas = false
             // Forma otimizada
-            supportFragmentManager
+           /* supportFragmentManager
                 .beginTransaction()
                 //.add(R.id.fragment_conteudo, ConversarFraments())
                 .replace(R.id.fragment_conteudo, conversarFraments)
-                .commit()
+                .commit()*/
+            val bundle = bundleOf(
+                "categoria" to "mercado"
+            )
+            supportFragmentManager.commit {
+                replace<ConversarFraments>(R.id.fragment_conteudo, args = bundle)
+            }
         }
         btnChamadas.setOnClickListener {
             chamadas = true
